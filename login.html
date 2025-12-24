@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ጥቁሬ - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <h1 data-lang="appName">Tqure / ጥቁሬ</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="pin" placeholder="PIN">
+    <select id="langSelect" onchange="setLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="am">Amharic</option>
+        <option value="om">Afaan Oromo</option>
+    </select>
+    <button onclick="loginUser()">Login</button>
+    <p id="errorMsg"></p>
+</div>
+<script src="lang.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
