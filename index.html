@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ጥቁሬ - POS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1 data-lang="appName">Tqure / ጥቁሬ</h1>
+<button onclick="logout()">Logout</button>
+</header>
+<div class="container">
+<section class="inventory">
+<h2 data-lang="inventory">Inventory / እቃዎች / Qabeenya</h2>
+<table id="inventoryTable">
+<thead>
+<tr>
+<th data-lang="barcode">Barcode</th>
+<th data-lang="product">Product</th>
+<th data-lang="price">Price</th>
+<th data-lang="quantity">Quantity</th>
+<th data-lang="actions">Actions</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<div class="inventory-form">
+<input type="text" id="barcodeInput" placeholder="Barcode">
+<input type="text" id="nameInput" placeholder="Product Name">
+<input type="number" id="priceInput" placeholder="Price">
+<input type="number" id="quantityInput" placeholder="Quantity">
+<button onclick="addProduct()" data-lang="addProduct">Add Product</button>
+</div>
+</section>
+<section class="pos">
+<h2 data-lang="pos">POS / ሽያጭ / Gurgurtaa</h2>
+<input type="text" id="scanInput" placeholder="Scan Barcode">
+<button onclick="addToCartAndPrint()" data-lang="addToCart">Add & Print</button>
+<table id="cartTable">
+<thead>
+<tr>
+<th data-lang="barcode">Barcode</th>
+<th data-lang="product">Product</th>
+<th data-lang="price">Price</th>
+<th data-lang="quantity">Quantity</th>
+<th data-lang="total">Total</th>
+<th data-lang="actions">Actions</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<button onclick="checkout()" data-lang="checkout">Checkout</button>
+<p id="totalDisplay" data-lang="totalAmount">Total: 0</p>
+</section>
+</div>
+<script src="lang.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
